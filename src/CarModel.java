@@ -21,6 +21,7 @@ public class CarModel
     {
         return name;
     }
+
     public double getWeight()
     {
         return weight;
@@ -40,4 +41,31 @@ public class CarModel
     {
         return type;
     }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setWeight(double weight)
+    {
+        this.weight = weight;
+    }
+
+    public void setSalesPrice(double salesPrice)
+    {
+        this.salesPrice = salesPrice;
+    }
+
+    public void setNumberSold(int numberSold)
+    {
+        this.numberSold = numberSold;
+    }
+
+    public void setType(String type)
+    {
+        this.type = type;
+    }
+
+
 }
