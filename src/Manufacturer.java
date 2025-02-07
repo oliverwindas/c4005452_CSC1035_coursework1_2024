@@ -21,4 +21,14 @@ public class Manufacturer
     {
         return carModels;
     }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setCarModels(List<CarModel> carModels)
+    {
+        this.carModels = carModels;
+    }
 }
