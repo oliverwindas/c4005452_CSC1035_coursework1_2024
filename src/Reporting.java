@@ -33,7 +33,7 @@ public class Reporting
         return mostExpensiveCarModel;
     }
 
-    public Manufacturer LargestManufacterRevenueByType(String type)
+    public Manufacturer getLargestManufacterRevenueByType(String type)
     {
         Manufacturer largestManufacturerByType = null;
 
@@ -49,5 +49,17 @@ public class Reporting
         }
 
         return largestManufacturerByType;
+    }
+
+    public List<CarModel> getAllCarModelsOverPrice(double price)
+    {
+        List<CarModel> allCarModelsOver = new ArrayList<>();
+
+        for (Manufacturer manufacturer : manufacturers)
+        {
+            allCarModelsOver.addAll(manufacturer.getListOfCarModelsOverPrice(price));
+        }
+
+        return allCarModelsOver;
     }
 }
