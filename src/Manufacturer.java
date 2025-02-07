@@ -22,6 +22,19 @@ public class Manufacturer
         return carModels;
     }
 
+    public CarModel getMostExpensiveCarMiodel()
+    {
+        CarModel mostExpensiveCarModel = null;
+        for (CarModel carModel : carModels)
+        {
+            if (mostExpensive == null || model.getSalesPrice() > mostExpensive.getSalesPrice())
+            {
+                mostExpensive = model;
+            }
+        }
+        return mostExpensiveCarModel;
+    }
+
     public void setName(String name)
     {
         this.name = name;
