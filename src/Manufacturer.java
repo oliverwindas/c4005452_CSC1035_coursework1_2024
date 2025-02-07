@@ -25,7 +25,7 @@ public class Manufacturer
     public CarModel getMostExpensiveCarModel()
     {
         CarModel mostExpensiveCarModel = null;
-        for (CarModel carModel : carModels)
+        for (CarModel Model : carModels)
         {
             if (mostExpensive == null || model.getSalesPrice() > mostExpensive.getSalesPrice())
             {
