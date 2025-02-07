@@ -48,6 +48,22 @@ public class Manufacturer
         return totalRevenue;
     }
 
+    public List<CarModel> getListOfCarModelsOverPrice(double price)
+    {
+        List<CarModel> CarModelsOver = new ArrayList<>();
+
+        for (CarModel model : carModels)
+        {
+            if (model.getSalesPrice() > price)
+            {
+                CarModelsOver.add(model);
+            }
+        }
+
+
+        return CarModelsOver;
+    }
+
     public void setName(String name)
     {
         this.name = name;
