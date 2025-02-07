@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Manufacturer
@@ -10,5 +11,7 @@ public class Manufacturer
         this.name = name;
         this.carModels = new ArrayList<>();
     }
+
+
 
 }
