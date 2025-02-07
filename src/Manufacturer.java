@@ -12,6 +12,13 @@ public class Manufacturer
         this.carModels = new ArrayList<>();
     }
 
+    public String getName()
+    {
+        return name;
+    }
 
-
+    public List<CarModel> getCarModels()
+    {
+        return carModels;
+    }
 }
