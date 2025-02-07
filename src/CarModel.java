@@ -1,4 +1,6 @@
-import java.util.Objects;
+/**
+ * Represents a car model with its details.
+ */
 
 public class CarModel
 {
@@ -8,6 +10,16 @@ public class CarModel
     private int numberSold;
     private String type; // "either hatchback, saloon or estate" as per the brief
 
+    /**
+     * Constructs a CarModel based off given brief.
+     *
+     * @param name       name of the car model
+     * @param weight     weight of the car model
+     * @param salesPrice sales price of the car model
+     * @param numberSold number of units sold
+     * @param type       type of the car model
+     */
+
     public CarModel(String name, double weight, double salesPrice, int numberSold, String type)
     {
         this.name = name;
@@ -16,6 +28,8 @@ public class CarModel
         this.numberSold = numberSold;
         this.type = type;
     }
+
+    // Getters
 
     public String getName()
     {
@@ -41,6 +55,8 @@ public class CarModel
     {
         return type;
     }
+
+    // Setters
 
     public void setName(String name)
     {
