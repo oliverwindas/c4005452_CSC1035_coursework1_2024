@@ -35,6 +35,19 @@ public class Manufacturer
         return mostExpensiveCarModel;
     }
 
+    public double getTotalRevenueByType(String type)
+    {
+        double totalRevenue = 0;
+        for (CarModel model : carModels)
+        {
+            if (model.getType().equals(type))
+            {
+                totalRevenue += (model.getSalesPrice()*model.getNumberSold());
+            }
+        }
+        return totalRevenue;
+    }
+
     public void setName(String name)
     {
         this.name = name;
