@@ -1,2 +1,6 @@
-public class ReportingIO {
+import java.util.Scanner;
+
+public class ReportingIO
+{
+
 }
