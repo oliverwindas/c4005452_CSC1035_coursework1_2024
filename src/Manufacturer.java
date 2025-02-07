@@ -22,7 +22,7 @@ public class Manufacturer
         return carModels;
     }
 
-    public CarModel getMostExpensiveCarMiodel()
+    public CarModel getMostExpensiveCarModel()
     {
         CarModel mostExpensiveCarModel = null;
         for (CarModel carModel : carModels)
