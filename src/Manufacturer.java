@@ -31,4 +31,9 @@ public class Manufacturer
     {
         this.carModels = carModels;
     }
+
+    public void addCarModel(CarModel carModel)
+    {
+        this.carModels.add(carModel);
+    }
 }
