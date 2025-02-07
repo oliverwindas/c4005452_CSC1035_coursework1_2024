@@ -9,4 +9,22 @@ public class Reporting
     {
         this.manufacturers = new ArrayList<>();
     }
+
+    public CarModel getMostExpensiveCarModelSold()
+    {
+        CarModel mostExpensiveCarModel = null;
+
+        for (Manufacturer manufacturer : manufacturers)
+        {
+            if (mostExpensiveCarModel == null
+                    || (manufacturer.getMostExpensiveCarModel() != null
+                    && manufacturer.getMostExpensiveCarModel().getSalesPrice()
+                    > mostExpensiveCarModel.getSalesPrice()))
+            {
+                mostExpensiveCarModel = manufacturer.getMostExpensiveCarModel();
+            }
+        }
+
+        return mostExpensiveCarModel;
+    }
 }
