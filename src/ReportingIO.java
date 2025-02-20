@@ -123,6 +123,20 @@ public class ReportingIO
 
     private static void provideReportingStatistics()
     {
+        System.out.println("Reporting Statistics:");
+
+        System.out.print("Enter car type for revenue statistics (hatchback, saloon, estate): ");
+        String type = scanner.nextLine();
+        Manufacturer highestRevenueManufacturer = reporting.getManufacturerWithLargestRevenue(type);
+        if (highestRevenueManufacturer != null)
+        {
+            System.out.println("Manufacturer with the largest revenue for " + type + "'s : " + highestRevenueManufacturer.getName());
+        }
+        else
+        {
+            System.out.println("No data available for the specified type.");
+        }
+
 
     }
 
