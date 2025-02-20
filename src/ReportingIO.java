@@ -49,5 +49,31 @@ public class ReportingIO
             scanner.close();
 
         }
+
+        private static void enterManufacturerData()
+        {
+
+        }
+
+        private static void enterCarModelData()
+        {
+
+        }
+
+        private static void listAllManufacturers()
+        {
+
+        }
+
+        private static void listCarModelsByManufacturer()
+        {
+
+        }
+
+        private static void provideReportingStatistics()
+        {
+
+        }
+
     }
 }
