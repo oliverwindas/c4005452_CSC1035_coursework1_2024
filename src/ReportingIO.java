@@ -43,10 +43,8 @@ public class ReportingIO
                 default:
                     System.out.println("Invalid option. Please try again.");
             }
-
-            scanner.close();
-
         }
+        scanner.close();
     }
 
     private static void enterManufacturerData()
