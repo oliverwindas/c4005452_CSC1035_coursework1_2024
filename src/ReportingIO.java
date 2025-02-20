@@ -137,7 +137,19 @@ public class ReportingIO
             System.out.println("No data available for the specified type.");
         }
 
-
+        CarModel mostExpensiveModel = reporting.getMostExpensiveCarModelSold();
+        if (mostExpensiveModel != null)
+        {
+            System.out.println("Most Expensive Car Model Sold: " + mostExpensiveModel.getName() +
+                    ", Price: " + mostExpensiveModel.getSalesPrice() +
+                    ", Weight: " + mostExpensiveModel.getWeight() +
+                    ", Number Sold: " + mostExpensiveModel.getNumberSold() +
+                    ", Type: " + mostExpensiveModel.getType());
+        }
+        else
+        {
+            System.out.println("No cars.");
+        }
     }
 
     private static Manufacturer findManufacturer(String name)
