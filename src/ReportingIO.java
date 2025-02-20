@@ -90,7 +90,11 @@ public class ReportingIO
 
     private static void listAllManufacturers()
     {
-
+        System.out.println("List of Manufacturers:");
+        for (Manufacturer manufacturer : reporting.getManufacturers())
+        {
+            System.out.println(manufacturer.getName());
+        }
     }
 
     private static void listCarModelsByManufacturer()
