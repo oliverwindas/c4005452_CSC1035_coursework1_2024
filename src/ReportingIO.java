@@ -102,6 +102,23 @@ public class ReportingIO
         System.out.print("Enter manufacturer name: ");
         String manufacturerName = scanner.nextLine();
         Manufacturer manufacturer = findManufacturer(manufacturerName);
+
+        if (manufacturer != null)
+        {
+            System.out.println("Car Models for " + manufacturer.getName() + ":");
+            for (CarModel model : manufacturer.getCarModels())
+            {
+                System.out.println("Name: " + model.getName() +
+                        ", Weight: " + model.getWeight() +
+                        ", Sales Price: " + model.getSalesPrice() +
+                        ", Number Sold: " + model.getNumberSold() +
+                        ", Type: " + model.getType());
+            }
+        }
+        else
+        {
+            System.out.println("Manufacturer not found.");
+        }
     }
 
     private static void provideReportingStatistics()
