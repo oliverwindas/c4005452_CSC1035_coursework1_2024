@@ -98,4 +98,9 @@ public class Reporting
 
         return allCarModelsOver;
     }
+
+    public List<Manufacturer> getManufacturers()
+    {
+        return manufacturers;
+    }
 }

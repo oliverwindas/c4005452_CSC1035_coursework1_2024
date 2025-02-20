@@ -127,7 +127,7 @@ public class ReportingIO
 
         System.out.print("Enter car type for revenue statistics (hatchback, saloon, estate): ");
         String type = scanner.nextLine();
-        Manufacturer highestRevenueManufacturer = reporting.getManufacturerWithLargestRevenue(type);
+        Manufacturer highestRevenueManufacturer = reporting.getLargestManufacterRevenueByType(type);
         if (highestRevenueManufacturer != null)
         {
             System.out.println("Manufacturer with the largest revenue for " + type + "'s : " + highestRevenueManufacturer.getName());
