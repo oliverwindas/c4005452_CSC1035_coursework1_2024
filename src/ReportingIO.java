@@ -60,7 +60,8 @@ public class ReportingIO
 
     private static void enterCarModelData()
     {
-
+        System.out.print("Enter manufacturer name: ");
+        String manufacturerName = scanner.nextLine();
     }
 
     private static void listAllManufacturers()
