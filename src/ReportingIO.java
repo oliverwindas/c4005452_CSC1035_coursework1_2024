@@ -79,5 +79,14 @@ public class ReportingIO
 
     }
 
+    private static Manufacturer findManufacturer(String name)
+    {
+        for (Manufacturer manufacturer : reporting.getManufacturers()) {
+            if (manufacturer.getName().equalsIgnoreCase(name)) {
+                return manufacturer;
+            }
+        }
+        return null;
+    }
 
 }
