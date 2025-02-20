@@ -99,7 +99,9 @@ public class ReportingIO
 
     private static void listCarModelsByManufacturer()
     {
-
+        System.out.print("Enter manufacturer name: ");
+        String manufacturerName = scanner.nextLine();
+        Manufacturer manufacturer = findManufacturer(manufacturerName);
     }
 
     private static void provideReportingStatistics()
