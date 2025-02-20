@@ -22,7 +22,29 @@ public class ReportingIO
             int choice = scanner.nextInt();
             scanner.nextLine();
 
-
+            switch (choice)
+            {
+                case 1:
+                    enterManufacturerData();
+                    break;
+                case 2:
+                    enterCarModelData();
+                    break;
+                case 3:
+                    listAllManufacturers();
+                    break;
+                case 4:
+                    listCarModelsByManufacturer();
+                    break;
+                case 5:
+                    provideReportingStatistics();
+                    break;
+                case 6:
+                    running = false; // Exit the loop
+                    break;
+                default:
+                    System.out.println("Invalid option. Please try again.");
+            }
 
 
 
