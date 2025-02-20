@@ -63,6 +63,29 @@ public class ReportingIO
         System.out.print("Enter manufacturer name: ");
         String manufacturerName = scanner.nextLine();
         Manufacturer manufacturer = findManufacturer(manufacturerName);
+
+        if (manufacturer != null)
+        {
+            System.out.print("Enter car model name: ");
+            String modelName = scanner.nextLine();
+            System.out.print("Enter weight (in kg): ");
+            double weight = scanner.nextDouble();
+            System.out.print("Enter sales price (in pounds): ");
+            double salesPrice = scanner.nextDouble();
+            System.out.print("Enter number sold: ");
+            int numberSold = scanner.nextInt();
+            scanner.nextLine();
+            System.out.print("Enter type (hatchback, saloon, estate): ");
+            String type = scanner.nextLine();
+
+            CarModel carModel = new CarModel(modelName, weight, salesPrice, numberSold, type);
+            manufacturer.addCarModel(carModel);
+            System.out.println("Car model added to manufacturer.");
+        }
+        else
+        {
+            System.out.println("Manufacturer not found.");
+        }
     }
 
     private static void listAllManufacturers()
