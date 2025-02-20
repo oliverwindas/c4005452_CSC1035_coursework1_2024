@@ -150,6 +150,27 @@ public class ReportingIO
         {
             System.out.println("No cars.");
         }
+
+        System.out.print("Enter a price to be greater than : ");
+        double priceThreshold = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.println("Cars with a price greater than " + priceThreshold + ":");
+        boolean found = false;
+        for (Manufacturer manufacturer : reporting.getManufacturers()) {
+            for (CarModel model : manufacturer.getCarModels()) {
+                if (model.getSalesPrice() > priceThreshold) {
+                    System.out.println("Name: " + model.getName() +
+                            ", Price: " + model.getSalesPrice() +
+                            ", Weight: " + model.getWeight() +
+                            ", Number Sold: " + model.getNumberSold() +
+                            ", Type: " + model.getType());
+                    found = true;
+                }
+            }
+        }
+        if (!found) {
+            System.out.println("No cars greater than " + priceThreshold);
+        }
     }
 
     private static Manufacturer findManufacturer(String name)
