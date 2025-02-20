@@ -5,8 +5,7 @@ public class ReportingIO
     private static Reporting reporting = new Reporting();
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         boolean running = true;
 
         while (running) {
@@ -22,8 +21,7 @@ public class ReportingIO
             int choice = scanner.nextInt();
             scanner.nextLine();
 
-            switch (choice)
-            {
+            switch (choice) {
                 case 1:
                     enterManufacturerData();
                     break;
@@ -49,31 +47,36 @@ public class ReportingIO
             scanner.close();
 
         }
+    }
 
-        private static void enterManufacturerData()
-        {
+    private static void enterManufacturerData()
+    {
+        System.out.print("Enter manufacturer name: ");
+        String name = scanner.nextLine();
+        Manufacturer manufacturer = new Manufacturer(name);
+        reporting.addManufacturer(manufacturer);
+        System.out.println("Added Manufacturer.");
+    }
 
-        }
-
-        private static void enterCarModelData()
-        {
-
-        }
-
-        private static void listAllManufacturers()
-        {
-
-        }
-
-        private static void listCarModelsByManufacturer()
-        {
-
-        }
-
-        private static void provideReportingStatistics()
-        {
-
-        }
+    private static void enterCarModelData()
+    {
 
     }
+
+    private static void listAllManufacturers()
+    {
+
+    }
+
+    private static void listCarModelsByManufacturer()
+    {
+
+    }
+
+    private static void provideReportingStatistics()
+    {
+
+    }
+
+
 }
