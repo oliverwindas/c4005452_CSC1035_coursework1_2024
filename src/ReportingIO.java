@@ -62,6 +62,7 @@ public class ReportingIO
     {
         System.out.print("Enter manufacturer name: ");
         String manufacturerName = scanner.nextLine();
+        Manufacturer manufacturer = findManufacturer(manufacturerName);
     }
 
     private static void listAllManufacturers()
