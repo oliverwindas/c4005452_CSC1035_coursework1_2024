@@ -40,13 +40,13 @@ public class ReportingIO
                     provideReportingStatistics();
                     break;
                 case 6:
-                    running = false; // Exit the loop
+                    running = false;
                     break;
                 default:
                     System.out.println("Invalid option. Please try again.");
             }
 
-
+            scanner.close();
 
         }
     }
