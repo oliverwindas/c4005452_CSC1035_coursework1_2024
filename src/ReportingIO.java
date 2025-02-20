@@ -18,6 +18,14 @@ public class ReportingIO
             System.out.println("5. Provide Reporting Statistics");
             System.out.println("6. Exit");
             System.out.print("Choose an option: ");
+
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+
+
+
+
+
         }
     }
 }
